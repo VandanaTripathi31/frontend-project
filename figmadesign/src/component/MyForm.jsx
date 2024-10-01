@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import './MyForm.css';
+
 
 const MyForm = () => {
   const [formData, setFormData] = useState({
@@ -79,196 +81,199 @@ const MyForm = () => {
   };
 
   return (
+    <div>
     <form onSubmit={handleSubmit}>
-      <div>
-        <label>Contact Name:</label>
+    <div>
+      <label>Contact Name:</label>
+      <input
+        type="text"
+        name="contactName"
+        value={formData.contactName}
+        onChange={handleInputChange}
+        required
+      />
+    </div>
+
+    <div>
+      <label>Company Name:</label>
+      <input
+        type="text"
+        name="companyName"
+        value={formData.companyName}
+        onChange={handleInputChange}
+        required
+      />
+    </div>
+
+    <div>
+      <label>Email Address:</label>
+      <input
+        type="email"
+        name="email"
+        value={formData.email}
+        onChange={handleInputChange}
+        required
+      />
+    </div>
+
+    <div>
+      <label>Phone Number:</label>
+      <input
+        type="text"
+        name="phone"
+        value={formData.phone}
+        onChange={handleInputChange}
+        required
+      />
+    </div>
+
+    <div>
+      <label>Country:</label>
+      <input
+        type="text"
+        name="country"
+        value={formData.country}
+        onChange={handleInputChange}
+        required
+      />
+    </div>
+
+    <div>
+      <label>City you are operating from:</label>
+      <input
+        type="text"
+        name="city"
+        value={formData.city}
+        onChange={handleInputChange}
+        required
+      />
+    </div>
+
+    <div>
+      <label>Roles you are looking to hire:</label>
+      <input
+        type="text"
+        name="roles"
+        value={formData.roles}
+        onChange={handleInputChange}
+        required
+      />
+    </div>
+
+    <div>
+      <h3>Employment Type You are Offering</h3>
+      <label>
         <input
-          type="text"
-          name="contactName"
-          value={formData.contactName}
-          onChange={handleInputChange}
-          required
+          type="checkbox"
+          name="fullTime"
+          checked={formData.employmentType.fullTime}
+          onChange={(e) => handleCheckboxChange(e, 'employmentType')}
         />
-      </div>
+        Full Time Role
+      </label>
 
-      <div>
-        <label>Company Name:</label>
+      <label>
         <input
-          type="text"
-          name="companyName"
-          value={formData.companyName}
-          onChange={handleInputChange}
-          required
+          type="checkbox"
+          name="partTime"
+          checked={formData.employmentType.partTime}
+          onChange={(e) => handleCheckboxChange(e, 'employmentType')}
         />
-      </div>
+        Part Time Role
+      </label>
 
-      <div>
-        <label>Email Address:</label>
+      <label>
         <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleInputChange}
-          required
+          type="checkbox"
+          name="internship"
+          checked={formData.employmentType.internship}
+          onChange={(e) => handleCheckboxChange(e, 'employmentType')}
         />
-      </div>
+        Internship Role
+      </label>
+    </div>
 
-      <div>
-        <label>Phone Number:</label>
+    <div>
+      <h3>Skill Level</h3>
+      <label>
         <input
-          type="text"
-          name="phone"
-          value={formData.phone}
-          onChange={handleInputChange}
-          required
+          type="checkbox"
+          name="intermediate"
+          checked={formData.skillLevel.intermediate}
+          onChange={(e) => handleCheckboxChange(e, 'skillLevel')}
         />
-      </div>
+        Intermediate Level
+      </label>
 
-      <div>
-        <label>Country:</label>
+      <label>
         <input
-          type="text"
-          name="country"
-          value={formData.country}
-          onChange={handleInputChange}
-          required
+          type="checkbox"
+          name="junior"
+          checked={formData.skillLevel.junior}
+          onChange={(e) => handleCheckboxChange(e, 'skillLevel')}
         />
-      </div>
+        Junior Level
+      </label>
 
-      <div>
-        <label>City you are operating from:</label>
+      <label>
         <input
-          type="text"
-          name="city"
-          value={formData.city}
-          onChange={handleInputChange}
-          required
+          type="checkbox"
+          name="senior"
+          checked={formData.skillLevel.senior}
+          onChange={(e) => handleCheckboxChange(e, 'skillLevel')}
         />
-      </div>
+        Senior Level
+      </label>
+    </div>
 
-      <div>
-        <label>Roles you are looking to hire:</label>
+    <div>
+      <h3>Are these positions Onsite or Remote?</h3>
+      <label>
         <input
-          type="text"
-          name="roles"
-          value={formData.roles}
-          onChange={handleInputChange}
-          required
+          type="checkbox"
+          name="onsite"
+          checked={formData.workMode.onsite}
+          onChange={(e) => handleCheckboxChange(e, 'workMode')}
         />
-      </div>
+        On Site
+      </label>
 
-      <div>
-        <h3>Employment Type You are Offering</h3>
-        <label>
-          <input
-            type="checkbox"
-            name="fullTime"
-            checked={formData.employmentType.fullTime}
-            onChange={(e) => handleCheckboxChange(e, 'employmentType')}
-          />
-          Full Time Role
-        </label>
-
-        <label>
-          <input
-            type="checkbox"
-            name="partTime"
-            checked={formData.employmentType.partTime}
-            onChange={(e) => handleCheckboxChange(e, 'employmentType')}
-          />
-          Part Time Role
-        </label>
-
-        <label>
-          <input
-            type="checkbox"
-            name="internship"
-            checked={formData.employmentType.internship}
-            onChange={(e) => handleCheckboxChange(e, 'employmentType')}
-          />
-          Internship Role
-        </label>
-      </div>
-
-      <div>
-        <h3>Skill Level</h3>
-        <label>
-          <input
-            type="checkbox"
-            name="intermediate"
-            checked={formData.skillLevel.intermediate}
-            onChange={(e) => handleCheckboxChange(e, 'skillLevel')}
-          />
-          Intermediate Level
-        </label>
-
-        <label>
-          <input
-            type="checkbox"
-            name="junior"
-            checked={formData.skillLevel.junior}
-            onChange={(e) => handleCheckboxChange(e, 'skillLevel')}
-          />
-          Junior Level
-        </label>
-
-        <label>
-          <input
-            type="checkbox"
-            name="senior"
-            checked={formData.skillLevel.senior}
-            onChange={(e) => handleCheckboxChange(e, 'skillLevel')}
-          />
-          Senior Level
-        </label>
-      </div>
-
-      <div>
-        <h3>Are these positions Onsite or Remote?</h3>
-        <label>
-          <input
-            type="checkbox"
-            name="onsite"
-            checked={formData.workMode.onsite}
-            onChange={(e) => handleCheckboxChange(e, 'workMode')}
-          />
-          On Site
-        </label>
-
-        <label>
-          <input
-            type="checkbox"
-            name="remote"
-            checked={formData.workMode.remote}
-            onChange={(e) => handleCheckboxChange(e, 'workMode')}
-          />
-          Remote
-        </label>
-      </div>
-
-      <div>
-        <label>What is your budget? (in rupees):</label>
+      <label>
         <input
-          type="number"
-          name="budget"
-          value={formData.budget}
-          onChange={handleInputChange}
-          required
+          type="checkbox"
+          name="remote"
+          checked={formData.workMode.remote}
+          onChange={(e) => handleCheckboxChange(e, 'workMode')}
         />
-      </div>
+        Remote
+      </label>
+    </div>
 
-      <div>
-        <label>Information about the role you are looking to hire:</label>
-        <textarea
-          name="roleInformation"
-          value={formData.roleInformation}
-          onChange={handleInputChange}
-          required
-        />
-      </div>
+    <div>
+      <label>What is your budget? (in rupees):</label>
+      <input
+        type="number"
+        name="budget"
+        value={formData.budget}
+        onChange={handleInputChange}
+        required
+      />
+    </div>
 
-      <button type="submit">Submit</button>
-    </form>
+    <div>
+      <label>Information about the role you are looking to hire:</label>
+      <textarea
+        name="roleInformation"
+        value={formData.roleInformation}
+        onChange={handleInputChange}
+        required
+      />
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+  </div>
+   
   );
 };
 

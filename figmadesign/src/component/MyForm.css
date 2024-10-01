@@ -1,0 +1,66 @@
+/* Container for the form */
+form {
+    max-width: 600px; /* Set a maximum width for the form */
+    margin: 20px auto; /* Center the form horizontally */
+    padding: 20px; /* Add some padding */
+    border: 1px solid #ccc; /* Light border around the form */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Style for individual form fields */
+div {
+    margin-bottom: 15px; /* Space between each form field */
+}
+
+/* Style for labels */
+label {
+    display: block; /* Stack labels on top of their corresponding inputs */
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold; /* Make labels bold */
+}
+
+/* Style for text inputs, email, number inputs, and textarea */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+    width: 100%; /* Make inputs fill the container */
+    padding: 10px; /* Add padding for comfort */
+    border: 1px solid #ccc; /* Light border around inputs */
+    border-radius: 4px; /* Rounded corners for inputs */
+    font-size: 16px; /* Font size for better readability */
+}
+
+/* Style for checkboxes */
+input[type="checkbox"] {
+    margin-right: 5px; /* Space between checkbox and label */
+}
+
+/* Style for the submit button */
+button {
+    padding: 10px 15px; /* Padding inside the button */
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for the button */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3; /* Darken button on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    form {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    button {
+        width: 100%; /* Make button full-width on small screens */
+    }
+}

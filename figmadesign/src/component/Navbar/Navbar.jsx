@@ -10,16 +10,18 @@ const Navbar = () => {
         {/* Add logo here if needed */}
       </div>
       <ul className="app__navbar-links">
-        <li className="p__opensans"><a href="#home">Home</a></li>
-        <li className="p__opensans"><a href="#about">About</a></li>
-        <li className="p__opensans"><a href="#menu">Menu</a></li>
-        <li className="p__opensans"><a href="#awards">Awards</a></li>
-        <li className="p__opensans"><a href="#contact">Contact</a></li>
+        <li className="p__opensans"><a href="#home">Mentors</a></li>
+        <li className="p__opensans"><a href="#about">How it works</a></li>
+        <li className="p__opensans"><a href="#menu">Projects</a></li>
+        <li className="p__opensans"><a href="#awards">Blog</a></li>
+        <li className="p__opensans"><a href="#contact">FAQ</a></li>
+        <li className="p__opensans"><a href="#contact">Code of Conduct</a></li>
+        <li className="p__opensans"><a href="#contact">Hire from Us</a></li>
       </ul>
       <div className="app__navbar-login">
-        <a href="#login" className="p__opensans">Log In / Register</a>
+        <a href="#login" className="p__opensans"></a>
         <div></div>
-        <a href="/" className="p__opensans">Book Table</a>
+        <a href="/" className="p__opensans">Apply Now</a>
       </div>
       <div className="app__navbar-smallscreen">
         {/* Removed the icons */}
@@ -29,11 +31,13 @@ const Navbar = () => {
           <div className="app__navbar-smallscreen_overlay flex__center slide-bottom">
             {/* Close button would go here */}
             <ul className="app__navbar-smallscreen_links">
-              <li className="p__opensans"><a href="#home">Home</a></li>
-              <li className="p__opensans"><a href="#about">About</a></li>
-              <li className="p__opensans"><a href="#menu">Menu</a></li>
-              <li className="p__opensans"><a href="#awards">Awards</a></li>
-              <li className="p__opensans"><a href="#contact">Contact</a></li>
+              <li className="p__opensans"><a href="#home">Mentors</a></li>
+              <li className="p__opensans"><a href="#about">How it works</a></li>
+              <li className="p__opensans"><a href="#menu">Project</a></li>
+              <li className="p__opensans"><a href="#awards">Blog</a></li>
+              <li className="p__opensans"><a href="#contact">FAQ</a></li>
+              <li className="p__opensans"><a href="#contact">Code of Conduct</a></li>
+              <li className="p__opensans"><a href="#contact">Hire from Us</a></li>
             </ul>
           </div>
         )}
